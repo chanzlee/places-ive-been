@@ -8,37 +8,50 @@
     <script src="js/jquery-3.3.1.js"></script>
     <script src="js/bootstrap.js"></script>
     <script src="js/scripts.js"></script>
-    <title>Address Book</title>
+    <title>Best Places</title>
   </head>
   <body>
     <div class="container">
-      <h1 class="animated bounce">Address Book</h1>
+      <h1 class="animated bounce">Best Places</h1>
       <div>
         <div class="row">
           <div class="col-md-6">
-            <h2>Add a contact:</h2>
-            <form id="new-contact">
+            <h2>Add a place:</h2>
+            <form id="add-place">
               <div class="form-group">
-                <label for="new-first-name">First Name</label>
-                <input type="text" class="form-control" id="new-first-name">
+                <label for="name">Name of the Place:</label>
+                <input type="text" class="form-control" id="name">
               </div>
               <div class="form-group">
-                <label for="new-last-name">Last Name</label>
-                <input type="text" class="form-control" id="new-last-name">
+                <label for="country">County:</label>
+                <input type="text" class="form-control" id="country">
               </div>
-              <button type="submit" class="btn">Add</button>
+              <div class="form-group">
+                <label for="landmark">Famous Landmark:</label>
+                <input type="text" class="form-control" id="landmark">
+              </div>
+              <div class="form-group">
+                <label for="yearVisited">Last year I visited:</label>
+                <input type="number" class="form-control" id="yearVisited">
+              </div>
+              <div class="form-group">
+                <label for="note">Notes:</label>
+                <input type="text" class="form-control" id="note">
+              </div>
+              <button type="submit" class="btn btn-warning">Add</button>
             </form>
             <h2>Contacts:</h2>
-            <ul id="contacts">
-
+            <ul id="places">
+              
             </ul>
           </div>
           <div class="col-md-6">
-            <div id="show-contact">
+            <div id="show-place">
               <h2></h2>
 
-              <p>First name: <span class="first-name"></span></p>
-              <p>Last name: <span class="last-name"></span></p>
+              <p>Landmark: <span class="landmark"></span></p>
+              <p>Year: <span class="yearVisited"></span></p>
+              <p>Notes: <span class="note"></span></p>
             </div>
           </div>
 

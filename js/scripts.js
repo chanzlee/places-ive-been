@@ -1,37 +1,53 @@
 // business logic
-function Contact(first, last) {
-  this.firstName = first;
-  this.lastName = last;
+function Place(name, country, landmark, yearVisited, note) {
+  this.name = name;
+  this.country = country;
+  this.landmark = landmark;
+  this.yearVisited = yearVisited;
+  this.note = note;
 }
 
-Contact.prototype.fullName = function() {
-  return this.firstName + " " + this.lastName;
+Place.prototype.title = function() {
+  return this.name + ", " + this.country;
 }
 
 
 
 // user logic
 $(document).ready(function() {
-  $("form#new-contact").submit(function(event) {
+  $("form#add-place").submit(function(event) {
     event.preventDefault();
-    var inputFirst = $("#new-first-name").val();
-    var inputLast = $("#new-last-name").val();
-
-    var newContact = new Contact(inputFirst, inputLast);
-
-    $("ul#contacts").append("<li><span class='contact'>" + newContact.fullName() + "</span></li>");
 
 
-    $(".contact").last().click(function(){
-      $("#show-contact").hide();
-      $("#show-contact").slideDown();
-      $("#show-contact h2").text(newContact.fullName());
-      $(".first-name").text(newContact.firstName);
-      $(".last-name").text(newContact.lastName);
+    var inputName = $("#name").val();
+    var inputCountry = $("#country").val();
+    var inputLandmark = $("#landmark").val();
+    var inputYearVisited = $("#yearVisited").val();
+    var inputNote = $("#note").val();
+
+
+
+    var newPlace = new Place(inputName, inputCountry, inputLandmark, inputYearVisited, inputNote);
+
+    $("ul#places").append("<li><span class='eachPlace'>" + newPlace.title() + "</span></li>");
+
+
+    $(".eachPlace").last().click(function(){
+      $("#show-place").hide();
+      $("#show-place").slideDown();
+      $("#show-place h2").text(newPlace.title());
+      $(".landmark").text(newPlace.landmark);
+      $(".yearVisited").text(newPlace.yearVisited);
+      $(".note").text(newPlace.note);
 
     });
-    $("input#new-last-name").val("");
-    $("input#new-first-name").val("");
+
+    var inputs = ["name", "country", "yearVisited", "note", "landmark"];
+
+    inputs.forEach(function(input) {
+      $('input#' + input).val("");
+    });
+
   });
 
 });

@@ -13,19 +13,19 @@ h1 {
 
 input#inputTxt, input#inputName, label, button.btn {
   width: 325px;
-  text-align: center;
+
 }
 
 
-#show-contact {
+#show-place {
   display: none;
 }
 
-.contact {
+.eachPlace {
   cursor: pointer;
   color: #0088cc;
 }
 
-.contact:hover {
+.eachPlace:hover {
   text-decoration: underline;
 }
