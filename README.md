@@ -1,6 +1,6 @@
-# _Address BOok_
+# _Address Book_
 
-#### _Address BOok_, August 20, 2018_
+#### _Address Book_, August 20, 2018_
 
 #### By _**Brian Nelson & Chan Lee**_
 
@@ -12,7 +12,8 @@ _Simple webage that takes user inputs of a place name, country, year, and notes 
 
 | Spec | Input | Output |
 | :-------------     | :------------- | :------------- |
-| **The program takes in 5 inputs and returns them back to the user.** | Input: "London, England, Ocean, 2018, Blah" | Output: "London, England, Ocean, 2018, Blah" |
+| **The program takes in 5 inputs and returns them back to the user.** | Input: "London, England, Ocean, 2018, Blah" | Output:  "London, England, Ocean, 2018, Blah" |
+| **The program appends new inputs to list of places with clickable links below the previous one.** | Input: "London" | Output: "... <br> London" |
 | **The program displays information with clickable links.** | Input: "London" | Output: "London (info)" |
 | **The program displays name and country in the same line.** | Input: "London, England" | Output: "London, England" |
 
