@@ -6,8 +6,15 @@
 
 ## Description
 
-_Simple webage that takes user first name and last name and displays it as an address book entry._
+_Simple webage that takes user inputs of a place name, country, year, and notes and displays it in a list and can recall the information by selecting the list to see all of the info._
 
+## Specs
+
+| Spec | Input | Output |
+| :-------------     | :------------- | :------------- |
+| **The program takes in 5 inputs and returns them back to the user.** | Input: "London, England, Ocean, 2018, Blah" | Output: "London, England, Ocean, 2018, Blah" |
+| **The program displays information with clickable links.** | Input: "London" | Output: "London (info)" |
+| **The program displays name and country in the same line.** | Input: "London, England" | Output: "London, England" |
 
 
 ## Setup/Installation Requirements
